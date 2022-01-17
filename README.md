@@ -1,16 +1,17 @@
 # Free games
 
-# Example usage
+## Example usage
 ```js
-    const games = await require("free-games")("en", "US")
-        .then(games => games.filter(game =>
-        game.price.totalPrice.discount &&
-        game.price.totalPrice.originalPrice == game.price.totalPrice.discount));
-    
-    console.log(games[0]);
+const games = await require("free-games")("en", "US")
+    .then(games => games.filter(game =>
+    game.price.totalPrice.discount &&
+    game.price.totalPrice.originalPrice == game.price.totalPrice.discount));
+
+console.log(games[0]);
 ```
+
+## Example response
 ```js
-    // example response
 [{
     "title": "Galactic Civilizations III",
     "id": "5d63b78c08184c10933a47874117db8c",
